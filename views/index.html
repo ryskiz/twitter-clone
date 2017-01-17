@@ -1,0 +1,27 @@
+
+{% extends "layout.html" %}
+
+{% block content %}
+  
+  <div class="page-header">
+  <br>
+    <h1>Welcome to Twitter.js!</h1>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <img src="https://pbs.twimg.com/profile_images/2450268678/olxp11gnt09no2y2wpsh_normal.jpeg"><br>
+      <b>Your Name</b><br>
+      100 followers
+    </div>
+    <div class="col-md-9">
+    	<h1>All tweets here!</h1>
+      <!-- display tweets here -->
+      {% for tweet in tweets %}
+      <img src="http://specials-images.forbesimg.com/imageserve/56d313f5e4b0c144a7f66bdf/320x486.jpg?fit=scale&background=000000">
+      	<h3>{{tweet.name}}</h3>
+        <li><p>{{tweet.content}}</p></li>
+      {% endfor %}
+    </div>
+  </div>
+    
+{% endblock %}
